@@ -1,0 +1,117 @@
+# Server
+
+## Purpose
+
+`Companion-TheCube-Server` is the cloud/server-side API prototype for the platform. Its documented and implemented responsibilities include:
+
+- User auth
+- Audio ingestion and speech-related processing
+- LLM-backed chat/session handling
+- Device registration and heartbeat
+- Telemetry ingestion
+- WebSocket-based streaming transcription
+- A small admin/management surface
+
+## Current implementation
+
+### Entry points
+
+- `server.js`: Express + HTTP server bootstrap
+- `wsServer.js`: WebSocket server for AWS Transcribe Streaming
+
+### Mounted route groups
+
+- `/API/auth`
+- `/API/audio`
+- `/API/llm`
+- `/API/user`
+- `/API/device`
+- `/API/telemetry`
+- `/MANAGE`
+
+### Other exposed endpoints
+
+- `/health-check`
+- `/signin`
+
+## Implemented behavior by route group
+
+### Auth
+
+Current auth routes include:
+
+- `POST /API/auth/login`
+- `POST /API/auth/refresh` (TODO)
+- `GET /API/auth/validate` (placeholder success path)
+- `GET /API/auth/logout` (placeholder)
+
+### Audio
+
+Current audio routes include:
+
+- `POST /API/audio/stream-in` returning `501 Not Implemented`
+- `POST /API/audio/verify-wakeword`
+- `POST /API/audio/command-interpret`
+- `POST /API/audio/synthesize`
+
+The implementation uses OpenAI for transcription/chat-style interpretation and AWS Polly for text-to-speech.
+
+### LLM
+
+Current LLM routes include:
+
+- `POST /API/llm/session`
+- `POST /API/llm/chat`
+
+The code implements session creation, DynamoDB-backed session storage, and function-calling examples for `getCurrentTime` and `getDeviceStatus`.
+
+### User
+
+- `GET /API/user/profile`
+
+### Device
+
+- `POST /API/device/register`
+- `POST /API/device/heartbeat`
+
+### Telemetry
+
+- `POST /API/telemetry/ingest`
+- `GET /API/telemetry/view`
+
+These routes are present but still appear incomplete. For example, the code references `timestream` without a visible local definition in the inspected route file.
+
+## Data and infrastructure dependencies
+
+The package manifest and source tree show dependencies on:
+
+- AWS Cognito
+- DynamoDB
+- Polly
+- Transcribe Streaming
+- Timestream
+- PostgreSQL client libraries
+- OpenAI SDK
+- Express, EJS, Winston, and WebSocket support
+
+## Status assessment
+
+This repo is beyond pure scaffolding, but it is still a prototype:
+
+- Some endpoints are implemented enough to document concretely.
+- Some are placeholders or partially wired.
+- The Drive API spec describes a broader target API than the code currently exposes.
+
+Any external-facing API documentation should therefore separate:
+
+- Current code-backed behavior
+- Draft/planned behavior from the Drive spec
+
+## Sources
+
+- Local: `Companion-TheCube-Server/server.js`
+- Local: `Companion-TheCube-Server/wsServer.js`
+- Local: `Companion-TheCube-Server/routes/api/*.js`
+- Local: `Companion-TheCube-Server/package.json`
+- Local: `Companion-TheCube-Server/Roadmap.md`
+- Drive: `API Spec` (`1MRpHKmnv0gBC6W04ChiXAwaYl-vGiCHyDwbuDkOoI48`)
