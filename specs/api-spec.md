@@ -40,6 +40,8 @@ The server repo currently mounts these route groups:
 
 It also exposes a WebSocket transcription flow.
 
+The current implementation is monolithic, but the intended backend architecture is microservices. This document should therefore separate the prototype endpoints that exist today from the long-term API contracts that are meant to survive the rewrite into multiple services.
+
 ## Currently implemented cloud/server endpoints
 
 | Endpoint | Status | Notes |
@@ -115,9 +117,9 @@ The Drive API draft describes a broader target surface, including:
 
 ## Open Items
 
-- `Decision needed:` select one stable API contract and naming scheme for the cloud/server surface.
+- `Decision needed:` select one stable API contract and naming scheme for the cloud/server surface. Current direction: keep the `/API/...` namespace unless the microservices rewrite produces a better convention.
 - `Open question:` define the exact boundary between device-local Core APIs and remote/cloud APIs.
-- `Needs verification:` determine which draft endpoints will be kept, renamed, replaced, or removed as implementation catches up.
+- `Needs verification:` determine which draft endpoints will be kept, renamed, replaced, or removed as implementation catches up and the monolithic prototype is replaced.
 
 ## Sources
 

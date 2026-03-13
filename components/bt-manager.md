@@ -37,8 +37,8 @@ There is very little narrative documentation in the repo. The safest current des
 
 ## Open Items
 
-- `Open question:` what exact runtime contract does BT Manager expose to Core or other services?
-- `Needs verification:` whether BT Manager is meant to remain a standalone executable or eventually fold back into Core.
+- `Open question:` what exact runtime contract does BT Manager expose to Core or other services? Current understanding: BT Manager will expose HTTP endpoints for Bluetooth operations, but the exact API contract and payload formats still need to be documented from the source.
+- `Needs verification:` whether BT Manager is meant to remain a standalone executable or eventually fold back into Core. Current direction: keep it standalone for now to preserve dependency and licensing separation, while leaving open the option of folding it into Core later if the boundary proves artificial.
 
 ## Sources
 

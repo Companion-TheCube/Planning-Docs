@@ -29,8 +29,8 @@ This example shows that TheCube's native runtime model is language-agnostic as l
 
 ## Open Items
 
-- `Decision needed:` choose the preferred deployment standard for .NET apps: self-contained publish, framework-dependent publish, or both.
-- `Needs verification:` the supported .NET runtime matrix and target architecture policy for device hardware.
+- `Decision needed:` choose the preferred deployment standard for .NET apps: self-contained publish, framework-dependent publish, or both. Current recommendation: use self-contained publish by default, while keeping framework-dependent publishing as a possible later option.
+- `Needs verification:` the supported .NET runtime matrix and target architecture policy for device hardware still need to be documented concretely.
 
 ## Sources
 

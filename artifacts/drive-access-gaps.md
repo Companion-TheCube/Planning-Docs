@@ -32,7 +32,7 @@ The first pass successfully pulled Google Docs content and local repo material, 
 
 ## Open Items
 
-- `Open question:` what is the exact Drive folder ID and the full contents of that folder tree?
+- `Open question:` what is the exact Drive folder ID and the full contents of that folder tree? 
 - `Decision needed:` decide whether future documentation publication should wait on artifact completeness or proceed incrementally.
 
 ## Sources

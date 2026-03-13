@@ -32,8 +32,8 @@ Python is a good candidate for rapid prototyping, AI-adjacent utilities, and int
 
 ## Open Items
 
-- `Needs verification:` whether the referenced `cube_sdk` is a real distributed runtime dependency or an aspirational placeholder in the example README.
-- `Open question:` what the final packaging, dependency-management, and runtime-isolation policy for Python apps will be.
+- `Needs verification:` whether the referenced `cube_sdk` is a real distributed runtime dependency or an aspirational placeholder in the example README. Current direction: build and distribute a Python SDK, but verify its actual implementation status before treating it as a real dependency.
+- `Open question:` what the final packaging, dependency-management, and runtime-isolation policy for Python apps will be. Current recommendation: use `requirements.txt`-based dependency management for now, while later documenting stronger isolation guidance such as virtual environments or containerization if needed.
 
 ## Sources
 

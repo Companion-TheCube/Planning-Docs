@@ -41,7 +41,7 @@ This first pass consolidates Google Drive planning docs, local repo READMEs, and
 
 ## Open Items
 
-- `Decision needed:` confirm the long-term split between what stays in `Planning-Docs` and what migrates into `Companion-TheCube.github.io`.
+- `Decision needed:` confirm the long-term split between what stays in `Planning-Docs` and what migrates into `Companion-TheCube.github.io`. Current direction: keep `Planning-Docs` focused on internal-facing, implementation-adjacent documentation, while `Companion-TheCube.github.io` hosts finalized public docs.
 - `Open question:` identify the exact Google Drive folder ID and complete non-Google-Docs artifact inventory.
 - `Needs verification:` several child docs are based on draft planning sources or partial implementations rather than finalized contracts.
 

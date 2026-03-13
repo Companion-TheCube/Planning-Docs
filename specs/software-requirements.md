@@ -142,7 +142,7 @@ The current Core source tree broadly matches that separation, though the exact c
 
 ## Open Items
 
-- `Decision needed:` choose whether device onboarding is formally mobile-first, desktop-first, or dual-path.
+- `Decision needed:` choose whether device onboarding is formally mobile-first, desktop-first, or dual-path. Current direction: support mobile, desktop, and on-device onboarding flows in parallel.
 - `Open question:` define concrete interface contracts and acceptance criteria for the conceptual requirements listed here.
 - `Needs verification:` latency and CPU targets from the draft need validation against the current hardware/software stack.
 

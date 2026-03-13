@@ -73,9 +73,9 @@ That means this doc should be treated as a subsystem map and current-state refer
 
 ## Open Items
 
-- `Open question:` confirm the intended long-term boundary between the device-local Core API and the separate cloud/server API.
-- `Decision needed:` decide whether Core continues to own most app lifecycle concerns directly or delegates more responsibility to helper components such as App Launcher or BT Manager.
-- `Needs verification:` several subsystems described in public-facing materials are still represented in code as active TODO areas rather than finished capability.
+- `Open question:` confirm the intended long-term boundary between the device-local Core API and the separate cloud/server API. Current direction: Core owns device-local interactions such as app lifecycle management, hardware control, and local UX, while the cloud/server APIs handle backend services, user management, and remote interactions.
+- `Decision needed:` decide whether Core continues to own most app lifecycle concerns directly or delegates more responsibility to helper components such as App Launcher or BT Manager. Current direction: Core keeps overall lifecycle ownership, while App Launcher handles the mechanics of launching apps. The current plan also calls for Landlock sandboxing in App Launcher alongside systemd supervision.
+- `Needs verification:` several subsystems described in public-facing materials are still represented in code as active TODO areas rather than finished capability. Current documentation will need periodic review against the codebase as implementation advances.
 
 ## Sources
 

@@ -12,6 +12,8 @@
 - WebSocket-based streaming transcription
 - A small admin/management surface
 
+The target backend architecture is microservices. The long-term plan is to separate major functional areas such as auth, LLM, audio, device management, telemetry, and app distribution into independent services that can be deployed and scaled separately. The current repository is a monolithic prototype and should be treated as an intermediate implementation that will need to be rewritten to match that architecture.
+
 ## Current implementation
 
 ### Entry points
@@ -109,9 +111,9 @@ Any external-facing API documentation should therefore separate:
 
 ## Open Items
 
-- `Decision needed:` lock a stable external API shape, including route naming and whether `/API/...` remains the long-term prefix.
-- `Needs verification:` telemetry, auth refresh, auth validation, and some admin behaviors are only partially implemented or rely on surrounding infrastructure not confirmed in this pass.
-- `Open question:` decide whether auth, LLM, audio, device, and telemetry remain in one service or split into separate deployable services over time.
+- `Decision needed:` lock a stable external API shape, including route naming and whether `/API/...` remains the long-term prefix. Current direction: keep the `/API/...` prefix unless the microservices rewrite produces a clearer naming convention.
+- `Needs verification:` telemetry, auth refresh, auth validation, and some admin behaviors are only partially implemented or rely on surrounding infrastructure not confirmed in this pass. Current status: development is ongoing, and the monolithic prototype is not yet a reliable indicator of the final service behavior.
+- `Open question:` decide whether auth, LLM, audio, device, and telemetry remain in one service or split into separate deployable services over time. Current direction: split these areas into microservices. The unresolved part is the exact service boundary and how much consolidation, if any, remains appropriate after the rewrite.
 
 ## Sources
 

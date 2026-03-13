@@ -14,7 +14,7 @@ These docs capture the current app model as implemented in the example repos and
 
 ## Open Items
 
-- `Decision needed:` confirm whether this folder remains an internal source set or becomes the canonical public app-platform documentation set later.
+- `Decision needed:` confirm whether this folder remains an internal source set or becomes the canonical public app-platform documentation set later. Current direction: keep it as the internal/source set while using it as the basis for the eventual canonical public app-platform docs.
 
 ## Sources
 

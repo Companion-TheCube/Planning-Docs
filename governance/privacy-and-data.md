@@ -63,8 +63,6 @@ A full privacy policy is still needed to define:
 3. Decide which data stays on-device versus which is transmitted off-device.
 4. Replace the placeholder public docs page with the reviewed policy or a policy summary.
 
-## Open Items
-
 - `Decision needed:` create and approve the authoritative Privacy Policy.
 - `Open question:` define exact local-versus-cloud processing rules for prompts, audio, telemetry, and app data.
 - `Needs verification:` confirm the actual third-party processors and retained data categories from the current code paths.

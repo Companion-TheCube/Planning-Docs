@@ -29,8 +29,8 @@ This is the most direct path for performance-sensitive native apps and is closes
 
 ## Open Items
 
-- `Open question:` whether CMake is the mandatory build system for all source-distributed native apps or just the current example convention.
-- `Needs verification:` the final ABI, IPC, and supervision expectations for native apps launched by Core.
+- `Open question:` whether CMake is the mandatory build system for all source-distributed native apps or just the current example convention. Current direction: use CMake as the native C++ convention for now, while leaving open the possibility of supporting other build systems later if there is demand.
+- `Needs verification:` the final ABI, IPC, and supervision expectations for native apps launched by Core still need to be documented concretely.
 
 ## Sources
 

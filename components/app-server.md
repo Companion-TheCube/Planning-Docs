@@ -9,6 +9,8 @@
 - Expose HTTP routes with Express
 - Potentially render UI with server-side templates
 
+Within the planned backend microservices architecture, this component is intended to become the app-distribution microservice rather than remain part of a monolithic backend.
+
 ## Current implementation
 
 The current codebase is significantly simpler than the README description:
@@ -42,9 +44,9 @@ Useful current takeaways:
 
 ## Open Items
 
-- `Decision needed:` define the exact boundary between App Server and the main Server repo.
-- `Open question:` decide whether this service remains a simple app catalog or expands into packaging, publishing, signing, and install/update workflows.
-- `Needs verification:` the current README describes a more mature service than the code actually implements.
+- `Decision needed:` define the exact boundary between App Server and the main Server repo. Current direction: App Server focuses on app cataloging and distribution, while the main Server repo handles broader backend APIs and account/device concerns.
+- `Open question:` decide whether this service remains a simple app catalog or expands into packaging, publishing, signing, and install/update workflows. Current direction: start as a catalog/distribution service first, then add deeper publishing and package-management features later if they are needed.
+- `Needs verification:` the current README describes a more mature service than the code actually implements. Current interpretation: the README is aspirational and does not yet match the implementation status.
 
 ## Sources
 

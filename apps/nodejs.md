@@ -31,8 +31,8 @@ This is the simplest script-based example and is a good fit for lightweight inte
 
 ## Open Items
 
-- `Open question:` what is the official support level for Node.js apps on target devices?
-- `Needs verification:` dependency isolation, supervision, and packaging/publishing rules for Node.js apps are not yet concrete in this repo.
+- `Open question:` what is the official support level for Node.js apps on target devices? Current direction: treat Node.js as a first-class runtime option in v1.
+- `Needs verification:` dependency isolation, supervision, and packaging/publishing rules for Node.js apps are not yet concrete in this repo. Current recommendation: use standard `package.json`-based dependency management until a stricter packaging policy is documented.
 
 ## Sources
 

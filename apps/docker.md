@@ -32,8 +32,8 @@ This is the clearest example of containerized app packaging for TheCube and is a
 
 ## Open Items
 
-- `Open question:` are Docker apps intended to be first-class in v1 or mainly a convenience/example path?
-- `Needs verification:` the install, update, trust, and security model for container image distribution is not yet documented here.
+- `Open question:` are Docker apps intended to be first-class in v1 or mainly a convenience/example path? Current direction: support Docker as a first-class packaging option in v1 alongside native executables.
+- `Needs verification:` the install, update, trust, and security model for container image distribution is not yet documented here. Current direction: use a trusted Docker registry for official apps and document signing/verification expectations for third-party images.
 
 ## Sources
 

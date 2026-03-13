@@ -229,7 +229,7 @@ Pricing in the source plan should be treated as draft product planning, not fina
 
 ## Open Items
 
-- `Decision needed:` finalize subscription tiers, naming, and pricing before treating this as a product baseline.
+- `Decision needed:` finalize subscription tiers, naming, and pricing before treating this as a product baseline. Current status: the tiers and pricing in this document are still draft planning values.
 - `Needs verification:` schedule ranges, effort estimates, LOC estimates, and single-person role assumptions are planning estimates, not validated delivery commitments.
 - `Needs verification:` the hardware feature list, character roster, and ecosystem scope are still planning-level and may not match the eventual shipped v1 surface.
 

@@ -63,6 +63,8 @@ This makes Core the central integration point for device behavior.
 
 The implementation is partly operational and partly draft, so docs need to distinguish present behavior from planned behavior.
 
+The target backend architecture is microservices, with separate services planned for major domains such as auth, LLM, audio, device management, telemetry, and app distribution. The current monolithic server code should therefore be treated as a transitional prototype that will need to be rewritten to match the planned service boundaries.
+
 ### App catalog/distribution
 
 `Companion-TheCube-AppServer` is the app catalog/distribution service. Its README describes a fuller service backed by Postgres, but the current implementation is still a thin Express app with in-memory app listings and a TODO-heavy roadmap.
@@ -95,7 +97,7 @@ The implementation is partly operational and partly draft, so docs need to disti
 
 ## Open Items
 
-- `Decision needed:` define the stable boundary between `Planning-Docs` as an internal/source repo and `Companion-TheCube.github.io` as the public docs site.
+- `Decision needed:` define the stable boundary between `Planning-Docs` as an internal/source repo and `Companion-TheCube.github.io` as the public docs site. Current direction: `Planning-Docs` remains the internal/source repo and `Companion-TheCube.github.io` remains the polished public docs site.
 - `Needs verification:` the current descriptions of server and app-server responsibilities combine implemented code with planned scope and will need periodic re-validation.
 - `Open question:` decide whether separate audience-specific overviews are needed for contributors, public users, and business/stakeholder readers.
 
