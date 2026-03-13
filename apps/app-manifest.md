@@ -70,6 +70,12 @@ This format is better aligned with a managed app runtime and sandbox model.
 - Use the richer YAML schema as the internal direction for future platform design.
 - Avoid claiming that the richer schema is already the active production contract unless Core implementation confirms it.
 
+## Open Items
+
+- `Decision needed:` choose the canonical manifest format and versioning path.
+- `Open question:` define which fields are required, optional, deprecated, or runtime-specific.
+- `Needs verification:` confirm whether cgroups, secrets, events, and fine-grained permission sections are implemented or still design-only.
+
 ## Sources
 
 - Local: `AppExample-Docker/manifest.json`

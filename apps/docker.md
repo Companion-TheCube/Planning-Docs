@@ -30,6 +30,11 @@ The example:
 
 This is the clearest example of containerized app packaging for TheCube and is a useful template for isolated or dependency-heavy apps.
 
+## Open Items
+
+- `Open question:` are Docker apps intended to be first-class in v1 or mainly a convenience/example path?
+- `Needs verification:` the install, update, trust, and security model for container image distribution is not yet documented here.
+
 ## Sources
 
 - Local: `AppExample-Docker/README.md`

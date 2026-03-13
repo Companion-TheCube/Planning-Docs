@@ -82,6 +82,12 @@ The public docs repo has app-platform placeholders, but the example repos alread
 
 Use the simple JSON manifests as the concrete, example-backed format. Treat the richer YAML schema inside Core as the likely next-stage internal contract and document it as forward-looking.
 
+## Open Items
+
+- `Decision needed:` select the authoritative app manifest/runtime model for v1 documentation and implementation: simple JSON, richer YAML, or a migration between them.
+- `Open question:` which runtimes are officially supported for production use versus provided only as examples?
+- `Needs verification:` the extent to which the richer sandboxing, secrets, and event model is already implemented in Core today.
+
 ## Sources
 
 - Local: `AppExample-Docker/manifest.json`

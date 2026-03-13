@@ -140,6 +140,12 @@ The current Core source tree broadly matches that separation, though the exact c
 - Some interfaces are described at a conceptual level but not yet pinned to concrete contracts.
 - The referenced Lucidchart system architecture diagram should be pulled into version control or recreated locally.
 
+## Open Items
+
+- `Decision needed:` choose whether device onboarding is formally mobile-first, desktop-first, or dual-path.
+- `Open question:` define concrete interface contracts and acceptance criteria for the conceptual requirements listed here.
+- `Needs verification:` latency and CPU targets from the draft need validation against the current hardware/software stack.
+
 ## Sources
 
 - Drive: `Software Requirements Specifications` (`11mgJ2IAxiTnyASn0a1NNlY1wSSCYfW13u-MHpugQhZA`)

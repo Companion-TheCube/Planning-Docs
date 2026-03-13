@@ -82,6 +82,12 @@ In parallel with the product roadmap, the server-side repos suggest a second del
 - Mature telemetry and admin/management capabilities
 - Replace TODO-heavy prototypes with production-ready implementations
 
+## Open Items
+
+- `Needs verification:` the phase targets in the source roadmap include dates such as Q1 2026 through 2027; as of March 13, 2026, the earliest targets are already in the past and need a refresh.
+- `Decision needed:` update the roadmap to match actual current priorities, delivery status, and remaining MVP scope.
+- `Open question:` decide which server/cloud milestones belong in the public roadmap versus an internal engineering roadmap.
+
 ## Sources
 
 - Local: `Roadmap/README.md`

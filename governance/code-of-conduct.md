@@ -48,6 +48,12 @@ Reports should be handled with discretion and respect for privacy.
 
 This Code of Conduct is adapted from widely used community guidelines intended to keep technical communities welcoming and harassment-free.
 
+## Open Items
+
+- `Needs verification:` confirm that the `private:conduct` reporting workflow actually exists and is maintainers-only.
+- `Needs verification:` confirm that `conduct@companion-thecube.org` is monitored and appropriate for enforcement reports.
+- `Decision needed:` document the final maintainer enforcement and escalation process if the project wants something more formal than the current summary.
+
 ## Sources
 
 - Drive: `Code of Conduct` (`1t-sSWn2H_dOl3pFgpou8gVFCyM3XlDmjOwuZ6f-y6ok`)

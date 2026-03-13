@@ -21,6 +21,11 @@ This component needs one of the following in a later pass:
 - A code walkthrough of its executable behavior
 - A decision about whether it remains separate or gets absorbed into Core app-management logic
 
+## Open Items
+
+- `Open question:` what launch responsibilities actually belong to this component versus Core's `appsManager`?
+- `Decision needed:` keep App Launcher as a separate component or fold its responsibilities into Core.
+
 ## Sources
 
 - Local: `App-Launcher/README.md`

@@ -113,6 +113,12 @@ The Drive API draft describes a broader target surface, including:
 - The Drive draft still contains TODO markers and unfinished endpoint planning.
 - The Core local API and the cloud/server API need a clearer contract boundary in future revisions.
 
+## Open Items
+
+- `Decision needed:` select one stable API contract and naming scheme for the cloud/server surface.
+- `Open question:` define the exact boundary between device-local Core APIs and remote/cloud APIs.
+- `Needs verification:` determine which draft endpoints will be kept, renamed, replaced, or removed as implementation catches up.
+
 ## Sources
 
 - Drive: `API Spec` (`1MRpHKmnv0gBC6W04ChiXAwaYl-vGiCHyDwbuDkOoI48`)

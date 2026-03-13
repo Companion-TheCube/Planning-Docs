@@ -27,6 +27,11 @@
 
 This example shows that TheCube's native runtime model is language-agnostic as long as the app ultimately exposes a native executable and compatible manifest.
 
+## Open Items
+
+- `Decision needed:` choose the preferred deployment standard for .NET apps: self-contained publish, framework-dependent publish, or both.
+- `Needs verification:` the supported .NET runtime matrix and target architecture policy for device hardware.
+
 ## Sources
 
 - Local: `AppExample-Native-CSharp/README.md`

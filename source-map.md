@@ -38,6 +38,11 @@ This file records the provenance for each markdown file in `Planning-Docs`.
 | `artifacts/lucidchart-system-architecture.md` | Synthesized summary | Drive `Software Requirements Specifications` | Records the linked Lucidchart architecture artifact. |
 | `artifacts/drive-access-gaps.md` | Synthesized | Drive MCP access behavior, search results | Captures non-doc artifact blockers and follow-up work. |
 
+## Open Items
+
+- `Needs verification:` this map may not yet be exhaustive for non-Google-Docs artifacts because Drive artifact enumeration was incomplete.
+- `Decision needed:` decide whether provenance should continue tracking only latest source inputs or also document revision history and conversion dates.
+
 ## Source identifiers
 
 - Drive `Project Plan`: `1MGhYIrw1OeJNf3VE6GtfyWub_-aGOUIYPgzjNJoUXzg`

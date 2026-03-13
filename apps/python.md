@@ -30,6 +30,11 @@ The example app:
 
 Python is a good candidate for rapid prototyping, AI-adjacent utilities, and integrations where packaging simplicity matters more than raw performance.
 
+## Open Items
+
+- `Needs verification:` whether the referenced `cube_sdk` is a real distributed runtime dependency or an aspirational placeholder in the example README.
+- `Open question:` what the final packaging, dependency-management, and runtime-isolation policy for Python apps will be.
+
 ## Sources
 
 - Local: `AppExample-Python/README.md`

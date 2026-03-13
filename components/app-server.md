@@ -40,6 +40,12 @@ Useful current takeaways:
 - It already has the right conceptual boundary: app listing and distribution metadata.
 - It still needs real persistence, auth, packaging rules, and deployment guidance.
 
+## Open Items
+
+- `Decision needed:` define the exact boundary between App Server and the main Server repo.
+- `Open question:` decide whether this service remains a simple app catalog or expands into packaging, publishing, signing, and install/update workflows.
+- `Needs verification:` the current README describes a more mature service than the code actually implements.
+
 ## Sources
 
 - Local: `Companion-TheCube-AppServer/Readme.md`

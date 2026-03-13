@@ -30,6 +30,11 @@ The first pass successfully pulled Google Docs content and local repo material, 
 2. Re-run artifact inventory for Sheets, Slides, PDFs, and subfolders.
 3. Add Markdown summaries or exported copies for planning-relevant artifacts.
 
+## Open Items
+
+- `Open question:` what is the exact Drive folder ID and the full contents of that folder tree?
+- `Decision needed:` decide whether future documentation publication should wait on artifact completeness or proceed incrementally.
+
 ## Sources
 
 - Google Drive MCP behavior observed during repository creation

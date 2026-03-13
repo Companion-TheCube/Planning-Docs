@@ -107,6 +107,12 @@ Any external-facing API documentation should therefore separate:
 - Current code-backed behavior
 - Draft/planned behavior from the Drive spec
 
+## Open Items
+
+- `Decision needed:` lock a stable external API shape, including route naming and whether `/API/...` remains the long-term prefix.
+- `Needs verification:` telemetry, auth refresh, auth validation, and some admin behaviors are only partially implemented or rely on surrounding infrastructure not confirmed in this pass.
+- `Open question:` decide whether auth, LLM, audio, device, and telemetry remain in one service or split into separate deployable services over time.
+
 ## Sources
 
 - Local: `Companion-TheCube-Server/server.js`

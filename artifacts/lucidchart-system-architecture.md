@@ -20,6 +20,11 @@ The diagram is not versioned locally in this repository, and its long-term acces
 - Add the exported artifact or a recreated text-based version to this repo.
 - Cross-link it from `specs/software-requirements.md` and any future architecture docs.
 
+## Open Items
+
+- `Decision needed:` choose the canonical local representation for this architecture diagram.
+- `Open question:` confirm who owns and updates the Lucidchart source and whether it still reflects the current architecture.
+
 ## Sources
 
 - Drive: `Software Requirements Specifications` (`11mgJ2IAxiTnyASn0a1NNlY1wSSCYfW13u-MHpugQhZA`)

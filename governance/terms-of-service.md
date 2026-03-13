@@ -156,6 +156,12 @@ The source draft includes placeholder contact details for:
 
 These placeholders should be replaced before publication.
 
+## Open Items
+
+- `Decision needed:` complete legal review and approve the final subscription, cancellation, refund, and liability language before treating this as binding.
+- `Needs verification:` replace the placeholder effective date, mailing address, support address, and legal contact details.
+- `Open question:` confirm that the subscription/tier behavior described here matches the evolving product and billing implementation.
+
 ## Sources
 
 - Drive: `Terms of Service (Draft)` (`18QYIVrWo9-3psN0YSRZE-vg5tu_SxR4ONWZF7nr7VNs`)

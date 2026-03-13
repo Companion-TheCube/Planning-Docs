@@ -71,6 +71,12 @@ The TODO inventory shows that Core is still actively evolving in these areas:
 
 That means this doc should be treated as a subsystem map and current-state reference, not as a statement that all advertised platform behaviors are finished.
 
+## Open Items
+
+- `Open question:` confirm the intended long-term boundary between the device-local Core API and the separate cloud/server API.
+- `Decision needed:` decide whether Core continues to own most app lifecycle concerns directly or delegates more responsibility to helper components such as App Launcher or BT Manager.
+- `Needs verification:` several subsystems described in public-facing materials are still represented in code as active TODO areas rather than finished capability.
+
 ## Sources
 
 - Local: `Companion-TheCube---Core/readme.md`

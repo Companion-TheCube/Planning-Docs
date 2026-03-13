@@ -29,9 +29,21 @@ This repo is intentionally plain Markdown. It complements, but does not replace,
 - Mark draft or incomplete areas explicitly.
 - Update [source-map.md](source-map.md) whenever new docs are added or source assumptions change.
 
+## Open-item notation
+
+- `Decision needed:` a choice still needs to be made.
+- `Open question:` a factual or product question is still unanswered.
+- `Needs verification:` the current statement is based on incomplete, draft, or conflicting sources.
+
 ## Current Status
 
 This first pass consolidates Google Drive planning docs, local repo READMEs, and current implementation notes into one standalone repository. Some non-Google-Docs artifacts remain blocked by current Drive tooling and are recorded under [Artifacts](artifacts/README.md).
+
+## Open Items
+
+- `Decision needed:` confirm the long-term split between what stays in `Planning-Docs` and what migrates into `Companion-TheCube.github.io`.
+- `Open question:` identify the exact Google Drive folder ID and complete non-Google-Docs artifact inventory.
+- `Needs verification:` several child docs are based on draft planning sources or partial implementations rather than finalized contracts.
 
 ## Sources
 

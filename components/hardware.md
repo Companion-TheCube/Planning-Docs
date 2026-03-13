@@ -45,6 +45,12 @@ Follow-up documentation is still needed for:
 - Power budget and thermal design
 - Variant strategy for MiniCube/WideCube/DoubleCube concepts
 
+## Open Items
+
+- `Needs verification:` final hardware BOM, connector specifications, sensors, and mechanical dimensions are not yet locked in this repo.
+- `Decision needed:` decide which hardware details belong in this summary versus separate board-level and mechanical documents.
+- `Open question:` confirm which planned form factors and expansion concepts are still active.
+
 ## Sources
 
 - Drive: `Project Plan` (`1MGhYIrw1OeJNf3VE6GtfyWub_-aGOUIYPgzjNJoUXzg`)

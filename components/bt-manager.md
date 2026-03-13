@@ -35,6 +35,11 @@ There is very little narrative documentation in the repo. The safest current des
 - It is built with Qt Bluetooth rather than the Core GUI stack.
 - It likely integrates with the rest of the platform over HTTP or local process boundaries, but that interface is not yet documented in the available source material.
 
+## Open Items
+
+- `Open question:` what exact runtime contract does BT Manager expose to Core or other services?
+- `Needs verification:` whether BT Manager is meant to remain a standalone executable or eventually fold back into Core.
+
 ## Sources
 
 - Local: `Companion-TheCube-BTManager/CMakeLists.txt`

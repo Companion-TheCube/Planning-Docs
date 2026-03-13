@@ -27,6 +27,11 @@
 
 The Rust example demonstrates a path for safe native apps that still deploy as standalone binaries within the same Core app-launching model.
 
+## Open Items
+
+- `Open question:` whether Rust is officially supported as a first-class app runtime or just represented by an example.
+- `Needs verification:` whether Cargo-produced artifacts need additional wrapper metadata, signing, or install-time preparation beyond the current example.
+
 ## Sources
 
 - Local: `AppExample-Native-Rust/README.md`

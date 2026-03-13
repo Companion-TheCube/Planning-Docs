@@ -93,6 +93,12 @@ The implementation is partly operational and partly draft, so docs need to disti
 3. Turn the example apps into a reusable packaging and manifest reference.
 4. Record open gaps: privacy policy, non-Docs Drive artifacts, and partially implemented server specs.
 
+## Open Items
+
+- `Decision needed:` define the stable boundary between `Planning-Docs` as an internal/source repo and `Companion-TheCube.github.io` as the public docs site.
+- `Needs verification:` the current descriptions of server and app-server responsibilities combine implemented code with planned scope and will need periodic re-validation.
+- `Open question:` decide whether separate audience-specific overviews are needed for contributors, public users, and business/stakeholder readers.
+
 ## Sources
 
 - Drive: `Project Plan` (`1MGhYIrw1OeJNf3VE6GtfyWub_-aGOUIYPgzjNJoUXzg`)
