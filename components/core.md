@@ -8,7 +8,7 @@ The Core is the primary runtime that runs on TheCube device hardware. It owns th
 - Hardware integration
 - GUI rendering and character presentation
 - App execution and lifecycle management
-- Audio input/output and speech-related flows
+- Audio input/output plus remote voice-AI handoff flows
 - Local APIs, auth, settings, and telemetry
 - Personality and decision logic
 
@@ -16,18 +16,18 @@ The Core is the primary runtime that runs on TheCube device hardware. It owns th
 
 The current source tree in `Companion-TheCube---Core/src` is organized into the following main subsystems:
 
-| Subsystem | Role |
-| --- | --- |
-| `api/` | Local REST-style interface exposure, auth helpers, interface registration |
-| `apps/` | Running app abstraction, app DB, app manager, Docker/native/python hooks |
-| `audio/` | Capture, output, routing, speech input, wake-word client |
-| `database/` | Core DB and blob/data access |
-| `decisionEngine/` | Intent handling, function registry, scheduling, transcription events, personality manager |
-| `gui/` | Renderer, status bar, character manager, menus, message boxes, shaders |
-| `hardware/` | Bluetooth, Wi-Fi, NFC, mmWave, peripheral management, fan/system control, I2C |
-| `logger/` | Structured logging |
-| `settings/` | Settings loading and global settings |
-| `telemetry/` | Device-side telemetry |
+| Subsystem         | Role                                                                                                                |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `api/`            | Local REST-style interface exposure, auth helpers, interface registration                                           |
+| `apps/`           | Running app abstraction, app DB, app manager, Docker/native/python hooks                                            |
+| `audio/`          | Capture, output, routing, wake-word client, remote audio transport hooks                                            |
+| `database/`       | Core DB and blob/data access                                                                                        |
+| `decisionEngine/` | Remote intent/transcription orchestration, function registry, scheduling, transcription events, personality manager |
+| `gui/`            | Renderer, status bar, character manager, menus, message boxes, shaders                                              |
+| `hardware/`       | Bluetooth, Wi-Fi, NFC, mmWave, peripheral management, fan/system control, I2C                                       |
+| `logger/`         | Structured logging                                                                                                  |
+| `settings/`       | Settings loading and global settings                                                                                |
+| `telemetry/`      | Device-side telemetry                                                                                               |
 
 ## API surface
 
@@ -64,7 +64,7 @@ The public docs repo already has a solid Core docs skeleton and some useful conc
 The TODO inventory shows that Core is still actively evolving in these areas:
 
 - App installation, update, and lifecycle completeness
-- Audio robustness and local TTS/STT polish
+- Audio robustness and remote voice pipeline polish (streaming, retries, latency, playback)
 - GUI settings, legal pages, privacy policy display, and system information pages
 - Database schema hardening and API cleanup
 - More complete documentation across app and character management
@@ -73,7 +73,7 @@ That means this doc should be treated as a subsystem map and current-state refer
 
 ## Open Items
 
-- `Open question:` confirm the intended long-term boundary between the device-local Core API and the separate cloud/server API. Current direction: Core owns device-local interactions such as app lifecycle management, hardware control, and local UX, while the cloud/server APIs handle backend services, user management, and remote interactions.
+- `Open question:` confirm the intended long-term boundary between the device-local Core API and the separate cloud/server API. Current direction: Core owns device-local interactions such as app lifecycle management, hardware control, wake-word detection, and local UX, while the cloud/server APIs own speech recognition, intent detection, text-to-speech, backend services, user management, and remote interactions.
 - `Decision needed:` decide whether Core continues to own most app lifecycle concerns directly or delegates more responsibility to helper components such as App Launcher or BT Manager. Current direction: Core keeps overall lifecycle ownership, while App Launcher handles the mechanics of launching apps. The current plan also calls for Landlock sandboxing in App Launcher alongside systemd supervision.
 - `Needs verification:` several subsystems described in public-facing materials are still represented in code as active TODO areas rather than finished capability. Current documentation will need periodic review against the codebase as implementation advances.
 

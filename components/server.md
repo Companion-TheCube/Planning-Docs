@@ -5,7 +5,9 @@
 `Companion-TheCube-Server` is the cloud/server-side API prototype for the platform. Its documented and implemented responsibilities include:
 
 - User auth
-- Audio ingestion and speech-related processing
+- Audio ingestion and remote speech recognition
+- Remote intent detection and command interpretation
+- Text-to-speech generation and audio response APIs
 - LLM-backed chat/session handling
 - Device registration and heartbeat
 - Telemetry ingestion
@@ -19,7 +21,7 @@ The target backend architecture is microservices. The long-term plan is to separ
 ### Entry points
 
 - `server.js`: Express + HTTP server bootstrap
-- `wsServer.js`: WebSocket server for AWS Transcribe Streaming
+- `wsServer.js`: WebSocket server for streaming transcription sessions
 
 ### Mounted route groups
 
@@ -57,6 +59,8 @@ Current audio routes include:
 - `POST /API/audio/synthesize`
 
 The implementation uses OpenAI for transcription/chat-style interpretation and AWS Polly for text-to-speech.
+
+Architecture direction: these speech/intelligence capabilities stay server-side. Core should not perform on-device speech recognition, text-to-speech synthesis, or intent detection.
 
 ### LLM
 
@@ -114,6 +118,7 @@ Any external-facing API documentation should therefore separate:
 - `Decision needed:` lock a stable external API shape, including route naming and whether `/API/...` remains the long-term prefix. Current direction: keep the `/API/...` prefix unless the microservices rewrite produces a clearer naming convention.
 - `Needs verification:` telemetry, auth refresh, auth validation, and some admin behaviors are only partially implemented or rely on surrounding infrastructure not confirmed in this pass. Current status: development is ongoing, and the monolithic prototype is not yet a reliable indicator of the final service behavior.
 - `Open question:` decide whether auth, LLM, audio, device, and telemetry remain in one service or split into separate deployable services over time. Current direction: split these areas into microservices. The unresolved part is the exact service boundary and how much consolidation, if any, remains appropriate after the rewrite.
+- `Confirmed architecture:` speech recognition, intent detection, and text-to-speech are remote-server responsibilities; on-device Core should only capture audio, stream/request processing, and render/play responses.
 
 ## Sources
 

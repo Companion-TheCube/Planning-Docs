@@ -24,7 +24,7 @@ TheCube should:
 - Fit cleanly into desk environments.
 - Favor plug-and-play setup with NFC-assisted onboarding.
 - Support modular expansion over time.
-- Prefer local processing with optional cloud extensions.
+- Use remote AI services for speech recognition, intent detection, and speech synthesis while keeping local orchestration and UX on-device.
 
 ### Market justification
 
@@ -71,8 +71,8 @@ TheCube blends:
 
 ### Software features
 
-- Optional cloud-backed speech and language processing.
-- Local-first alternative paths for speech recognition, interpretation, and speech synthesis.
+- Remote-server speech recognition, intent detection, and text-to-speech.
+- On-device orchestration for audio capture, streaming, response playback, and UI rendering.
 - App platform for entertainment and productivity features.
 - Inter-unit communication across NFC and wireless links.
 - Multi-unit collective display or coordinated behavior.
@@ -85,23 +85,23 @@ The project uses a solo-developer-friendly Agile workflow with room for future o
 ### Planned phases
 
 1. Project planning
-   - Define scope, objectives, milestones, and high-level schedule.
+    - Define scope, objectives, milestones, and high-level schedule.
 2. Requirements gathering
-   - Capture functional, non-functional, and interface requirements for hardware and software.
+    - Capture functional, non-functional, and interface requirements for hardware and software.
 3. System design
-   - Establish hardware schematics and software architecture.
+    - Establish hardware schematics and software architecture.
 4. Development and implementation
-   - Build the initial codebase and hardware prototypes.
+    - Build the initial codebase and hardware prototypes.
 5. Testing and validation
-   - Perform unit, integration, and system-level validation.
+    - Perform unit, integration, and system-level validation.
 6. Documentation
-   - Produce user-facing and contributor-facing documentation.
+    - Produce user-facing and contributor-facing documentation.
 7. Release and deployment
-   - Prepare builds, distribution, and first-user rollout.
+    - Prepare builds, distribution, and first-user rollout.
 8. Maintenance and upgrades
-   - Address bugs, updates, and capability growth after release.
+    - Address bugs, updates, and capability growth after release.
 9. Community engagement
-   - Support contributors, review pull requests, and keep public repos healthy.
+    - Support contributors, review pull requests, and keep public repos healthy.
 
 ## Project Schedule
 
@@ -109,52 +109,52 @@ The project uses a solo-developer-friendly Agile workflow with room for future o
 
 - Duration: 1 to 2 months
 - Milestones:
-  - Scope and deliverables defined
-  - Initial requirements gathered
-  - Project plan approved
+    - Scope and deliverables defined
+    - Initial requirements gathered
+    - Project plan approved
 
 ### Phase 2: System design
 
 - Duration: 1 to 2 months
 - Milestones:
-  - Hardware schematics drafted
-  - Software architecture finalized
-  - Design reviewed
+    - Hardware schematics drafted
+    - Software architecture finalized
+    - Design reviewed
 
 ### Phase 3: Development and implementation
 
 - Duration: 6 to 12 months
 - Milestones:
-  - Initial software and hardware prototype completed
-  - Core functionality running
+    - Initial software and hardware prototype completed
+    - Core functionality running
 
 ### Phase 4: Testing and validation
 
 - Duration: 2 to 3 months
 - Milestones:
-  - Feature and integration testing completed
-  - Major bugs identified and fixed
+    - Feature and integration testing completed
+    - Major bugs identified and fixed
 
 ### Phase 5: Documentation and pre-release
 
 - Duration: 1 month
 - Milestones:
-  - User manuals complete
-  - Technical docs prepared for contributors
+    - User manuals complete
+    - Technical docs prepared for contributors
 
 ### Phase 6: Release and initial feedback
 
 - Duration: 1 month
 - Milestones:
-  - Prototype or early release distributed
-  - Initial feedback collected
+    - Prototype or early release distributed
+    - Initial feedback collected
 
 ### Phase 7: Maintenance and community engagement
 
 - Duration: ongoing
 - Milestones:
-  - Regular updates
-  - Continued contributor and community management
+    - Regular updates
+    - Continued contributor and community management
 
 ### Schedule flexibility
 
@@ -206,13 +206,13 @@ Roles currently consolidated into one person:
 
 - No mobility or robotic-arm concepts in v1
 - Single-user focus in v1
-- Advanced AI models depend on optional cloud services
+- Speech recognition, intent detection, and text-to-speech depend on remote services
 - Limited smart home integrations at launch
-- Security model is local-first but still evolving
+- Security/privacy model is data-minimizing but still evolving
 
 ## TheCube+ Subscription Service
 
-- Free tier: local AI only
+- Free tier: baseline remote AI usage limits
 - Cube+1: casual cloud AI usage
 - Cube+2: expanded voice and premium interactions
 - Cube+3: highest-capacity tier for heavy users and developers

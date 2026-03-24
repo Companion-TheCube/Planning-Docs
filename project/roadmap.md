@@ -10,13 +10,13 @@ Target from source roadmap: Q1 2026
 
 - Adjustable personality engine
 - Wake-word detection
-- Speech recognition
+- Remote speech recognition integration
 - Notifications for calendar and basic messaging
 - To-do lists and reminders
 - Alarm clock and Pomodoro timer
 - Presence-aware idle mode
 - Screen UI and navigation
-- Audio engine for feedback and personality voice
+- Audio engine for feedback and remote-generated personality voice
 - Initial USB-C peripheral API
 - Mini-games such as Tetris, Pong, and text adventures
 
@@ -77,7 +77,7 @@ Target from source roadmap: 2027
 In parallel with the product roadmap, the server-side repos suggest a second delivery track:
 
 - Stabilize auth and device registration
-- Support streaming transcription and voice processing
+- Support streaming transcription and remote voice processing (ASR/intent/TTS)
 - Separate user-facing cloud APIs from app distribution/catalog APIs
 - Mature telemetry and admin/management capabilities
 - Replace TODO-heavy prototypes with production-ready implementations

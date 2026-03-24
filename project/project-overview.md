@@ -8,7 +8,7 @@ Companion, TheCube is an open, modular desktop companion platform built around a
 
 - A desk hardware product with display, audio, sensors, and expansion interfaces.
 - A Core runtime that manages hardware, apps, configuration, personality logic, and local APIs.
-- Optional cloud services for voice, AI, telemetry, account, and device-linked features.
+- Cloud services for speech recognition, intent detection, text-to-speech, telemetry, account, and device-linked features.
 - An app platform with multiple runtime models and example templates.
 - A broader ecosystem of characters, modules, accessories, and community contributions.
 
@@ -22,9 +22,9 @@ TheCube is meant to feel like a character, not just an appliance. Personality tr
 
 The practical value proposition is reminders, notifications, AI interaction, lightweight productivity support, and integration with surrounding devices or services.
 
-### 3. Local-first privacy
+### 3. Privacy with remote AI boundaries
 
-The intended architecture prefers local processing where possible, with optional cloud augmentation for heavier AI workloads or subscription-based features.
+The architecture uses remote AI services for speech recognition, intent detection, and text-to-speech. Privacy posture is achieved through minimization, permission gating, and strict transport/security controls rather than local execution of those AI steps.
 
 ### 4. Modularity
 
@@ -55,7 +55,7 @@ This makes Core the central integration point for device behavior.
 `Companion-TheCube-Server` acts as the main cloud/server prototype. It currently includes:
 
 - Auth routes
-- Audio and voice-processing routes
+- Speech recognition, intent detection, and text-to-speech routes
 - LLM chat/session routes
 - Device registration and heartbeat
 - Telemetry endpoints

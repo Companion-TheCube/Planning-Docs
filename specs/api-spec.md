@@ -10,6 +10,8 @@ This is a cleaned draft that combines:
 
 The important distinction is that not every endpoint in the Drive spec exists in code yet.
 
+Architecture direction for current planning: speech recognition, intent detection, and text-to-speech are remote-server capabilities. Core handles on-device capture/playback and orchestration.
+
 ## API surfaces in the project
 
 ### 1. Device-local Core API
@@ -44,23 +46,23 @@ The current implementation is monolithic, but the intended backend architecture 
 
 ## Currently implemented cloud/server endpoints
 
-| Endpoint | Status | Notes |
-| --- | --- | --- |
-| `POST /API/auth/login` | Implemented | Username/password login against DynamoDB-backed user lookup |
-| `POST /API/auth/refresh` | Placeholder | Present but TODO |
-| `GET /API/auth/validate` | Placeholder | Returns `200` on auth middleware pass |
-| `GET /API/auth/logout` | Placeholder | Stub response |
-| `POST /API/audio/stream-in` | Stub | Returns `501 Not Implemented` |
-| `POST /API/audio/verify-wakeword` | Implemented | STT then wake-word detection |
-| `POST /API/audio/command-interpret` | Implemented | STT then LLM interpretation |
-| `POST /API/audio/synthesize` | Implemented | AWS Polly TTS, streaming or base64 response |
-| `POST /API/llm/session` | Implemented | Creates chat session |
-| `POST /API/llm/chat` | Implemented | Chat with optional function-calling behavior |
-| `GET /API/user/profile` | Implemented | Returns user profile |
-| `POST /API/device/register` | Implemented | Registers device |
-| `POST /API/device/heartbeat` | Implemented | Updates heartbeat |
-| `POST /API/telemetry/ingest` | Partial | Route exists; implementation references external Timestream client assumptions |
-| `GET /API/telemetry/view` | Partial | Route exists; admin-only intent |
+| Endpoint                            | Status      | Notes                                                                          |
+| ----------------------------------- | ----------- | ------------------------------------------------------------------------------ |
+| `POST /API/auth/login`              | Implemented | Username/password login against DynamoDB-backed user lookup                    |
+| `POST /API/auth/refresh`            | Placeholder | Present but TODO                                                               |
+| `GET /API/auth/validate`            | Placeholder | Returns `200` on auth middleware pass                                          |
+| `GET /API/auth/logout`              | Placeholder | Stub response                                                                  |
+| `POST /API/audio/stream-in`         | Stub        | Returns `501 Not Implemented`                                                  |
+| `POST /API/audio/verify-wakeword`   | Implemented | Transitional route; wake-word/voice preprocessing on server side               |
+| `POST /API/audio/command-interpret` | Implemented | Server-side transcription + intent detection/interpretation                    |
+| `POST /API/audio/synthesize`        | Implemented | Server-side text-to-speech (provider-backed), streaming or base64 response     |
+| `POST /API/llm/session`             | Implemented | Creates chat session                                                           |
+| `POST /API/llm/chat`                | Implemented | Chat with optional function-calling behavior                                   |
+| `GET /API/user/profile`             | Implemented | Returns user profile                                                           |
+| `POST /API/device/register`         | Implemented | Registers device                                                               |
+| `POST /API/device/heartbeat`        | Implemented | Updates heartbeat                                                              |
+| `POST /API/telemetry/ingest`        | Partial     | Route exists; implementation references external Timestream client assumptions |
+| `GET /API/telemetry/view`           | Partial     | Route exists; admin-only intent                                                |
 
 ## Drive-draft cloud/server endpoints
 
@@ -95,7 +97,7 @@ The Drive API draft describes a broader target surface, including:
 ### Audio flow
 
 - Drive draft proposes explicit transcribe/stream/cancel endpoints.
-- Current code provides wake-word verification, command interpretation, and TTS, plus a stub streaming route.
+- Current code provides server-side wake-word verification, server-side command interpretation, and server-side TTS, plus a stub streaming route.
 
 ### Telemetry
 
@@ -113,12 +115,12 @@ The Drive API draft describes a broader target surface, including:
 - Auth refresh and validation are not fully implemented.
 - Some route files appear to reference missing or externally defined objects.
 - The Drive draft still contains TODO markers and unfinished endpoint planning.
-- The Core local API and the cloud/server API need a clearer contract boundary in future revisions.
+- The Core local API and the cloud/server API need a clearer contract boundary in future revisions; current direction is remote ownership of ASR/intent/TTS.
 
 ## Open Items
 
 - `Decision needed:` select one stable API contract and naming scheme for the cloud/server surface. Current direction: keep the `/API/...` namespace unless the microservices rewrite produces a better convention.
-- `Open question:` define the exact boundary between device-local Core APIs and remote/cloud APIs.
+- `Open question:` define the exact boundary between device-local Core APIs and remote/cloud APIs for remaining domains beyond voice AI (voice AI boundary is now remote-owned).
 - `Needs verification:` determine which draft endpoints will be kept, renamed, replaced, or removed as implementation catches up and the monolithic prototype is replaced.
 
 ## Sources

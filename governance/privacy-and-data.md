@@ -6,7 +6,7 @@ This is an explicit draft and gap document. A standalone Privacy Policy source d
 
 What is available today:
 
-- The product planning docs emphasize local-first processing and privacy as a core differentiator.
+- The current architecture direction sets speech recognition, intent detection, and text-to-speech as remote-server processing paths.
 - The Terms of Service draft refers to a separate Privacy Policy.
 - Core has TODOs to load and display a privacy policy from a file.
 - The public docs site's cloud privacy page is currently a placeholder.
@@ -17,8 +17,8 @@ What is available today:
 
 TheCube is intended to favor:
 
-- Local processing where feasible
-- Optional cloud augmentation rather than mandatory cloud dependence
+- Data minimization and strong transport security for remote AI operations
+- Clear separation of local orchestration vs remote AI processing
 - Permission-gated hardware and data access
 
 ### Known cloud processing paths
@@ -26,8 +26,9 @@ TheCube is intended to favor:
 The current server and terms drafts imply or state use of third-party processors for:
 
 - LLM interactions
-- Speech transcription
-- Text-to-speech
+- Speech transcription (remote)
+- Intent detection/interpretation (remote)
+- Text-to-speech (remote)
 - Payment processing
 
 ### Known data categories
@@ -60,11 +61,11 @@ A full privacy policy is still needed to define:
 
 1. Locate or draft the missing standalone Privacy Policy.
 2. Align the policy with actual Core/server data flows.
-3. Decide which data stays on-device versus which is transmitted off-device.
+3. Define exact minimization rules for what audio/context is transmitted off-device for remote AI processing.
 4. Replace the placeholder public docs page with the reviewed policy or a policy summary.
 
 - `Decision needed:` create and approve the authoritative Privacy Policy.
-- `Open question:` define exact local-versus-cloud processing rules for prompts, audio, telemetry, and app data.
+- `Open question:` define exact transmission/retention rules for prompts, audio, telemetry, and app data now that voice AI is remote-server-owned.
 - `Needs verification:` confirm the actual third-party processors and retained data categories from the current code paths.
 
 ## Sources
